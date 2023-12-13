@@ -1,0 +1,13 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: aks-flux-lab04-2
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  path: ./k8s/manifests
+  prune: false
+  sourceRef:
+    kind: GitRepository
+    name: aks-flux-lab04-2
